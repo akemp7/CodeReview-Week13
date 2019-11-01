@@ -16,7 +16,12 @@ namespace ParksClient.Models {
             var result = apiCallTask.Result;
 
             JArray jsonResponse = JsonConvert.DeserializeObject<JArray> (result);
-            List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jsonResponse.ToString());
+           List<Park> parkList = new List<Park> ();
+            foreach (JObject jo in jsonResponse) {
+                Park newPark = JsonConvert.DeserializeObject<Park> (jo.ToString ());
+                parkList.Add (newPark);
+            }
+
             return parkList;
         }
     }

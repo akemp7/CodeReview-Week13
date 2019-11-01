@@ -1,0 +1,16 @@
+@using ParksClient.Models;
+@model List<Park>;
+<h1>All Words:</h1>
+
+<ol>
+@foreach (Park park in Model)
+{
+    <ul>
+        <li>@park.Name</li>
+        
+    </ul>
+    <br>
+}
+</ol>
+
+<button class="btn btn-default">@Html.ActionLink("Add a Park", "Create", "Park")</button>

@@ -18,7 +18,7 @@ namespace Parks.Controllers
             _db = db;
         }
 
-        // GET api/parks
+        // GET api/ParksApi
         [HttpGet]
         public ActionResult <IEnumerable<Park>> Get(int parkId, string name, string land, string state)
         {
@@ -43,7 +43,7 @@ namespace Parks.Controllers
             return query.ToList();
         }
 
-        // POST api/parks
+        // POST api/ParksApi
         [HttpPost]
          public void Post([FromBody] Park parks)
          {
@@ -52,14 +52,14 @@ namespace Parks.Controllers
          }
 
 
-        //GET api/parks/id
+        //GET api/ParksApi?parkId
         [HttpGet("{id}")]
         public ActionResult<Park> Get(int id)
         {
             return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
         }
 
-        //PUT api/parks/id
+        //PUT api/ParksApi?parkId
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Park park)
         {
@@ -68,7 +68,7 @@ namespace Parks.Controllers
             _db.SaveChanges();
         }
 
-        //DELETE api/parks/id
+        //DELETE api/ParksApi?parkId
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

@@ -5,13 +5,14 @@
 #### By _Anita Kemp_
 
 ## Description
-_This API is a database of the state and national parks of the SW United States. Currently, there is a list of the national parks (and some of the state parks) for New Mexico and Colorado. With the MVC application, the user will be able to add other state and national parks of the SW (e.g. NM, CO, AZ, UT)._
+_This API is a database of the state and national parks of the SW United States. Currently, there is a list of the national parks (and some of the state parks) for New Mexico and Colorado. With the MVC application, the user will be able to see the list of current parks and their details._
 
 ## Setup/Installation Requirements
 * _Clone this repository_
 * _Navigate to the "Parks" directory, and run dotnet ef database update_
 #### To make an API call without the MVC app - the endpoint is: localhost:5000/api/ParksApi, for specific requests: 
 #### localhost:5000/api/ParksApi?{choose from: parkId, name, land, state}={your search query}
+_Or, you can go to localhost:5000/swagger, to see all methods._
 
 #### To use the MVC application:
 * _Run dotnet run_
@@ -25,7 +26,7 @@ _Please leave a comment on this repository if there are any questions._
 
 ## Technologies Used
 
-_C#, .NET, MVC, MySQL, Entity_
+_C#, .NET, MVC, MySQL, Entity, Swagger_
 
 ### License
 

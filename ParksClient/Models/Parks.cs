@@ -20,16 +20,16 @@ namespace ParksClient.Models {
             return parkList;
         }
 
-         public static Park PostPark(Park park)
-        {
-            var apiCallTask = ApiHelper.ApiCallParksList(park.Name);
-            var result = apiCallTask.Result;
-            JArray jresponse = JsonConvert.DeserializeObject<JArray>(result);
-            List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jresponse.ToString());
-            Park newPark = parkList[0];
-            var apiPutTask = ApiHelper.ApiPost(newPark.ParkId, newPark);
-            return newPark;
-        }
+        //  public static Park PutPark(int id, Park park)
+        // {
+        //     var apiCallTask = ApiHelper.ApiCallParksList(park.Name);
+        //     var result = apiCallTask.Result;
+        //     JArray jresponse = JsonConvert.DeserializeObject<JArray>(result);
+        //     List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jresponse.ToString());
+        //     Park newPark = parkList[0];
+        //     var apiPutTask = ApiHelper.ApiPut(newPark.ParkId, newPark);
+        //     return newPark;
+        // }
     }
 }
     

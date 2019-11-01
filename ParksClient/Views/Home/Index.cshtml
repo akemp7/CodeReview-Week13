@@ -6,7 +6,7 @@
 @foreach (Park park in Model)
 {
     <ul>
-        <li>@Html.ActionLink(@park.Name, "Details", "Park", new Park {ParkId = park.ParkId, Name = park.Name})</li>
+        <li>@Html.ActionLink(@park.Name, "Details", "Park", new Park {ParkId = park.ParkId, State = park.State, Land = park.Land})</li>
     </ul>
     <br>
 }

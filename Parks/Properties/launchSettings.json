@@ -13,7 +13,7 @@
       "IIS Express": {
         "commandName": "IISExpress",
         "launchBrowser": true,
-        "launchUrl": "api/words",
+        "launchUrl": "api/parks",
         "environmentVariables": {
           "ASPNETCORE_ENVIRONMENT": "Development"
         }

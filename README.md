@@ -10,7 +10,8 @@ _This API is a database of the state and national parks of the SW United States.
 ## Setup/Installation Requirements
 * _Clone this repository_
 * _Navigate to the "Parks" directory, and run dotnet ef database update_
-#### To make an API call without the MVC app - the endpoint is: localhost:5000/api/ParksApi
+#### To make an API call without the MVC app - the endpoint is: localhost:5000/api/ParksApi, for specific requests: 
+#### localhost:5000/api/ParksApi?{choose from: parkId, name, land, state}={your search query}
 
 #### To use the MVC application:
 * _Run dotnet run_

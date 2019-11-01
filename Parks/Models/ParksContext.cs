@@ -16,6 +16,15 @@ namespace Parks.Models
             builder.Entity<Park>()
                 .HasData(
 
+                    new Park {ParkId = 1, Name= "", Land = "", State=""},
+                    new Park {ParkId = 1, Name= "", Land = "", State=""},
+                    new Park {ParkId = 1, Name= "", Land = "", State=""},
+                    new Park {ParkId = 1, Name= "", Land = "", State=""},
+                    new Park {ParkId = 1, Name= "", Land = "", State=""},
+                    new Park {ParkId = 1, Name= "", Land = "", State=""},
+                    new Park {ParkId = 1, Name= "", Land = "", State=""},
+                    new Park {ParkId = 1, Name= "", Land = "", State=""},
+                    new Park {ParkId = 1, Name= "", Land = "", State=""},
                     new Park {ParkId = 1, Name= "", Land = "", State=""}
             );
         }

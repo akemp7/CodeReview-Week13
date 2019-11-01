@@ -51,12 +51,15 @@ namespace Parks.Controllers
             _db.SaveChanges();
          }
 
-         [HttpGet("{id}")]
+
+        //GET api/parks/id
+        [HttpGet("{id}")]
         public ActionResult<Park> Get(int id)
         {
             return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
         }
 
+        //PUT api/parks/id
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Park park)
         {
@@ -65,6 +68,7 @@ namespace Parks.Controllers
             _db.SaveChanges();
         }
 
+        //DELETE api/parks/id
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

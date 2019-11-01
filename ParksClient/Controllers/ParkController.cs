@@ -13,6 +13,21 @@ namespace ParksClient.Controllers
 {
     public class ParkController : Controller
     {
+
+      
+        public ActionResult Create()
+        {
+
+           return View(); 
+        }
+
+        [HttpPost]
+        public ActionResult Create(Park park)
+        {
+             var newPark = Park.PutPark(park);
+            return RedirectToAction("Index", "Home", newPark);
+        }
+        
         public ActionResult Details (Park park)
         {
             return View(park);

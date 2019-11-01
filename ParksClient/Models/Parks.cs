@@ -10,7 +10,8 @@ namespace ParksClient.Models {
         public double Land { get; set; }
         public int State { get; set; }
 
-        public static List<Park> GetParks() {
+        public static List<Park> GetParks() 
+        {
             var apiCallTask = ApiHelper.ApiCall ();
             var result = apiCallTask.Result;
 
@@ -18,3 +19,6 @@ namespace ParksClient.Models {
             List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jsonResponse.ToString());
             return parkList;
         }
+    }
+}
+    

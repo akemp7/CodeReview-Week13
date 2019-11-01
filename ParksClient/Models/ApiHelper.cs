@@ -12,3 +12,5 @@ namespace ParksClient.Models
             var response = await client.ExecuteTaskAsync(request);
             return response.Content;
         }
+    }
+}

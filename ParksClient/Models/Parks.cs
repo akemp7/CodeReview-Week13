@@ -19,17 +19,6 @@ namespace ParksClient.Models {
             List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jsonResponse.ToString());
             return parkList;
         }
-
-        //  public static Park PutPark(int id, Park park)
-        // {
-        //     var apiCallTask = ApiHelper.ApiCallParksList(park.Name);
-        //     var result = apiCallTask.Result;
-        //     JArray jresponse = JsonConvert.DeserializeObject<JArray>(result);
-        //     List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jresponse.ToString());
-        //     Park newPark = parkList[0];
-        //     var apiPutTask = ApiHelper.ApiPut(newPark.ParkId, newPark);
-        //     return newPark;
-        // }
     }
 }
     

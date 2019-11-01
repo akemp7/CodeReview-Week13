@@ -32,7 +32,7 @@ namespace Parks
 
       
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
+        { //Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>
                 {

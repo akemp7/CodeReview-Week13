@@ -21,10 +21,27 @@ _This API is a database of the state and national parks of the SW United States.
 
 * _To make specific requests, one can use Postman or another service and enter: localhost:5000/api/ParksApi?{*then choose from*: parkId, name, land, state}={your search query}_
 
-
-### API Response Examples: 
-
 * _Or, you can navigate to localhost:5000/swagger in order to see all functionality for this API_
+
+
+### API Response Examples:
+```
+curl -X GET "http://localhost:5000/api/ParksApi?parkId=1" -H "accept: text/plain"
+```
+```
+## Request URL
+http://localhost:5000/api/ParksApi?parkId=1
+```
+```
+[
+  {
+    "parkId": 1,
+    "name": "Carlsbad Caverns",
+    "land": "National",
+    "state": "NM"
+  }
+]
+```
 
 ## Support and contact details
 
